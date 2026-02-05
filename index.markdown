@@ -13,7 +13,7 @@ css: "/static/css/home.css"
             <li><a href="/works">Works</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/performances">Upcoming Performances</a></li>
-            <li><a href="#press">Press</a></li>
+            <li><a href="/press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>

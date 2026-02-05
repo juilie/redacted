@@ -1,0 +1,72 @@
+h1 {
+  text-align: center;
+  margin: 32px auto 22px;
+  font-size: 2.6rem;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  padding: 0 18px 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.press-card {
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+}
+
+.press-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.press-card figcaption {
+  padding: 14px 16px 16px;
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.press-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.press-caption {
+  color: #e3e3e3;
+  font-size: 0.98rem;
+}
+
+.press-credit {
+  color: #c6c6c6;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+    margin: 26px auto 18px;
+  }
+  .press-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+    padding: 0 12px 32px;
+  }
+  .press-card img {
+    height: 190px;
+  }
+}
