@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta name="generator" content="Jekyll v4.3.3" />
+  <meta property="og:title" content="{{ page.title | escape }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="{{ page.description | default: site.description | escape }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:site_name" content="{{ site.title | escape }}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="{{ page.title | escape }}" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "description": "{{ page.description | default: site.description | escape }}",
+      "headline": "{{ page.title | escape }}",
+      "name": "{{ site.title | escape }}",
+      "url": "{{ page.url | absolute_url }}"
+    }
+  </script>
+  <!-- End Jekyll SEO tag -->
+
+  <!-- <link rel="stylesheet" href="/static/css/default.css"> -->
+  <link type="application/atom+xml" rel="alternate" href="{{ "/feed.xml" | absolute_url }}" title="{{ site.title }}" />
+
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/static/css/default.css' | relative_url }}">
+  <!-- Page-specific CSS -->
+  {% if page.css %}
+  <link rel="stylesheet" href="{{ page.css | relative_url }}">
+  {% endif %}
+</head>
+
+<body>
+  <div class="marquee">
+    <div class="marquee-content">
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+        <span>REDACTED</span>
+    </div>
+  </div>
+  {% unless page.url == '/' or page.url == '/index.html' %}
+  <a href="/" class="home-button">「Redacted」</a>
+  {% endunless %}
+  <main>
+    {{ content }}
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/static/uploads"
+
+collections:
+  - name: "performances"
+    label: "Performances"
+    folder: "_performances"
+    create: true
+    slug: "performances/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {label: "Performance Date", name: "date", widget: "datetime", required: false}
+      - { label: "Description", name: "description", widget: "markdown", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Location", name: "location", widget: "string", required: true }
+  - name: "works"
+    label: "Works"
+    folder: "_works"
+    create: true
+    slug: "works/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "markdown", required: true }
+      - { label: "Video", name: "video", widget: "file", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

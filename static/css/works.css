@@ -1,12 +1,7 @@
-body {
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
 
 h1 {
     text-align: center;
+    font-size: 4rem;
     padding: 20px;
     margin: 0;
 }
@@ -49,6 +44,16 @@ h1 {
 .work-item p {
     margin: 0;
     pointer-events: none;
+}
+
+.performance-date {
+    font-weight: 600;
+    color: #ccc;
+}
+
+.performance-location {
+    font-style: italic;
+    color: #aaa;
 }
 
 /* Mobile responsive styles */

@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'terminal';
+    src: url('/static/fonts/terminal-grotesque_open.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    /* font-family: 'terminal', sans-serif; */
+}
+
+.marquee {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: inline-flex;
+    animation: scroll-left 20s linear infinite;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.marquee-content span {
+    display: inline-block;
+    padding-right: 50px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+main {
+    margin-top: 40px;
+}
+
+.home-button {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    z-index: 999;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.home-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .home-button {
+        top: 45px;
+        left: 10px;
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+}
