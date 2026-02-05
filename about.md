@@ -3,7 +3,7 @@ title: About
 layout: default
 css: "/static/css/about.css"
 body: |
-  # Company [REDACTED]
+  # 「Redacted」
   
   Using fantasy as a guide towards creation, Mimi Doan and Cole Stapleton have been collaborating as choreographers since 2019. Company [REDACTED] utilizes the fantasy of situation and circumstance, emotion and play to create dynamic worlds for their pieces.
   

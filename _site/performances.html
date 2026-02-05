@@ -42,6 +42,11 @@
 </head>
 
 <body>
+  <div class="image-background">
+    <video autoplay loop muted playsinline>
+        <source src="/static/videos/redacted.webm" type="video/webm">
+    </video>
+</div>
   <div class="marquee">
     <div class="marquee-content">
         <span>REDACTED</span>
@@ -69,51 +74,93 @@
     </div>
   </div>
   
-  <a href="/" class="home-button">「Redacted」</a>
+  <nav class="site-nav-bar">
+    <a href="/" class="site-brand">「Redacted」</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <div class="site-nav-links">
+      <a href="/works">Works</a>
+      <a href="/performances">Performances</a>
+      <a href="/about">About</a>
+    </div>
+  </nav>
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav-bar');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('nav-open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          toggle.textContent = isOpen ? 'Close' : 'Menu';
+        });
+      }
+    })();
+  </script>
   
   <main>
-    <h1>Upcoming Performances</h1>
-<div class="works-container">
+    <h1>「Upcoming Performances」</h1>
+<div class="performances-list">
     
     
-    <a href="https://example.com/performance1" class="work-item" target="_blank" rel="noopener noreferrer">
-        <h2>My Apocalypse</h2>
-        
-        <p class="performance-date">August 15, 2024 at 03:00 PM</p>
-        
-        
-        <p class="performance-location">Judson Memorial Church, New York, NY</p>
-        
-        
-        <p>A performance exploring themes of transformation and renewal.</p>
-        
-    </a>
+    <div class="performance-card">
+        <div class="performance-left">
+            
+            <div class="performance-date-strong">September 09 @  7:00 PM</div>
+            
+            <div class="performance-title">1-Way Mirror</div>
+            
+            <div class="performance-venue">Center for Ballet Arts</div>
+            
+        </div>
+        <div class="performance-right">
+            
+            <div class="performance-location-strong">NYC, NY</div>
+            
+            
+            <a href="https://example.com/performance1" class="performance-button" target="_blank" rel="noopener noreferrer">More Info</a>
+            
+        </div>
+    </div>
     
-    <a href="https://example.com/performance2" class="work-item" target="_blank" rel="noopener noreferrer">
-        <h2>Some Land of Redemption</h2>
-        
-        <p class="performance-date">September 20, 2024 at 04:00 PM</p>
-        
-        
-        <p class="performance-location">The Kitchen, New York, NY</p>
-        
-        
-        <p>An evening of movement and sound.</p>
-        
-    </a>
+    <div class="performance-card">
+        <div class="performance-left">
+            
+            <div class="performance-date-strong">September 27 @ 12:00 PM</div>
+            
+            <div class="performance-title">1-Way Mirror</div>
+            
+            <div class="performance-venue">Cannonball Festival @ Philly Fringe</div>
+            
+        </div>
+        <div class="performance-right">
+            
+            <div class="performance-location-strong">Philadelphia, PA</div>
+            
+            
+            <a href="https://example.com/performance2" class="performance-button" target="_blank" rel="noopener noreferrer">More Info</a>
+            
+        </div>
+    </div>
     
-    <a href="https://example.com/performance3" class="work-item" target="_blank" rel="noopener noreferrer">
-        <h2>New Work</h2>
-        
-        <p class="performance-date">October 10, 2024 at 03:30 PM</p>
-        
-        
-        <p class="performance-location">BAM, Brooklyn, NY</p>
-        
-        
-        <p>Premiere of a new collaborative piece.</p>
-        
-    </a>
+    <div class="performance-card">
+        <div class="performance-left">
+            
+            <div class="performance-date-strong">September 28 @  7:00 PM</div>
+            
+            <div class="performance-title">1-Way Mirror</div>
+            
+            <div class="performance-venue">Cannonball Festival @ Philly Fringe</div>
+            
+        </div>
+        <div class="performance-right">
+            
+            <div class="performance-location-strong">Philadelphia, PA</div>
+            
+            
+            <a href="https://example.com/performance3" class="performance-button" target="_blank" rel="noopener noreferrer">More Info</a>
+            
+        </div>
+    </div>
     
 </div>
 

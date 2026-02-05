@@ -42,6 +42,11 @@
 </head>
 
 <body>
+  <div class="image-background">
+    <video autoplay loop muted playsinline>
+        <source src="/static/videos/redacted.webm" type="video/webm">
+    </video>
+</div>
   <div class="marquee">
     <div class="marquee-content">
         <span>REDACTED</span>
@@ -69,12 +74,33 @@
     </div>
   </div>
   
-  <a href="/" class="home-button">「Redacted」</a>
+  <nav class="site-nav-bar">
+    <a href="/" class="site-brand">「Redacted」</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <div class="site-nav-links">
+      <a href="/works">Works</a>
+      <a href="/performances">Performances</a>
+      <a href="/about">About</a>
+    </div>
+  </nav>
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav-bar');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('nav-open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          toggle.textContent = isOpen ? 'Close' : 'Menu';
+        });
+      }
+    })();
+  </script>
   
   <main>
     <div class="about-content">
   
-    <h1 id="company-redacted">Company [REDACTED]</h1>
+    <h1 id="redacted">「Redacted」</h1>
 
 <p>Using fantasy as a guide towards creation, Mimi Doan and Cole Stapleton have been collaborating as choreographers since 2019. Company [REDACTED] utilizes the fantasy of situation and circumstance, emotion and play to create dynamic worlds for their pieces.</p>
 

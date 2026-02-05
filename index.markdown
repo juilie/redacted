@@ -6,11 +6,7 @@ layout: default
 title: Home
 css: "/static/css/home.css"
 ---
-<div class="image-background">
-    <video autoplay loop muted playsinline>
-        <source src="/static/videos/redacted.webm" type="video/webm">
-    </video>
-</div>
+
 <div class="content">
         <h1>「Redacted」</h1>
         <ul class="nav-links">
