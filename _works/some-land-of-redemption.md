@@ -1,5 +1,5 @@
 ---
 title: Some Land of Redemption
 description: CPR
-link: https://example.com/video3
+link: https://youtu.be/e_qwEk49zV4
 ---
