@@ -42,7 +42,11 @@
 <body>
   <div class="image-background">
     <video id="background-video" autoplay loop muted playsinline webkit-playsinline preload="auto">
-        <source src="/static/videos/mirror.mp4" type="video/mp4">
+        <!-- H.264 MP4 for Safari/iOS compatibility (must be H.264, not VP9) -->
+        <source src="/static/videos/mirror3.mp4" type="video/mp4;">
+        <!-- Fallback MP4 -->
+        <!-- <source src="/static/videos/mirror.mp4" type="video/mp4"> -->
+         <!-- <source src="/static/videos/redacted.webm" type="video/webm;"> -->
     </video>
   </div>
   <svg class="filter" id="filter" style="display: none;">

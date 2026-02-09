@@ -13,14 +13,14 @@ h1 {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     /* width: fit-content; */
     /* background-color: #000; */
-    margin-bottom: 20px;
+    margin-bottom: 36px;
 }
 
 .content {
     position: relative;
     z-index: 1;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 16px;
+    margin-top: 16px;
 }
 
 li {

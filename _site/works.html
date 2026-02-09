@@ -44,7 +44,11 @@
 <body>
   <div class="image-background">
     <video id="background-video" autoplay loop muted playsinline webkit-playsinline preload="auto">
-        <source src="/static/videos/mirror.mp4" type="video/mp4">
+        <!-- H.264 MP4 for Safari/iOS compatibility (must be H.264, not VP9) -->
+        <source src="/static/videos/mirror3.mp4" type="video/mp4;">
+        <!-- Fallback MP4 -->
+        <!-- <source src="/static/videos/mirror.mp4" type="video/mp4"> -->
+         <!-- <source src="/static/videos/redacted.webm" type="video/webm;"> -->
     </video>
   </div>
   <svg class="filter" id="filter" style="display: none;">
@@ -142,21 +146,21 @@
 <div class="works-container">
     
     
-    <a href="https://example.com/video2" class="work-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.youtube.com/watch?v=TCmDM3O1CXQ" class="work-item" target="_blank" rel="noopener noreferrer">
         <h2>My Apocalypse</h2>
         
         <p>at Hannah Traore Gallery, New York, NY</p>
         
     </a>
     
-    <a href="https://example.com/video1" class="work-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.youtube.com/watch?v=TCmDM3O1CXQ" class="work-item" target="_blank" rel="noopener noreferrer">
         <h2>My Apocalypse</h2>
         
         <p>at Judson Church, New York, NY</p>
         
     </a>
     
-    <a href="https://example.com/video3" class="work-item" target="_blank" rel="noopener noreferrer">
+    <a href="https://youtu.be/e_qwEk49zV4" class="work-item" target="_blank" rel="noopener noreferrer">
         <h2>Some Land of Redemption</h2>
         
         <p>CPR</p>
