@@ -4,7 +4,7 @@ css: "/static/css/works.css"
 layout: default
 ---
 
-<h1>「Upcoming Performances」</h1>
+<h1><span class="bracket-left">「</span>Upcoming Performances<span class="bracket-right">」</span></h1>
 <div class="performances-list">
     {% assign performances = site.performances | sort: 'date' %}
     {% for performance in performances %}

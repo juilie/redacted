@@ -143,7 +143,15 @@ h1 {
 @media (max-width: 768px) {
     h1 {
         padding: 15px;
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+
+    .bracket-left {
+        margin-left: -3rem;
+    }
+
+    .bracket-right {
+        margin-right: -3rem;
     }
     
     .works-container {
@@ -212,7 +220,7 @@ h1 {
 @media (max-width: 480px) {
     h1 {
         padding: 12px;
-        font-size: 1.75rem;
+        font-size: 3rem;
     }
     
     .works-container {

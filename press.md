@@ -12,11 +12,6 @@ css: "/static/css/press.css"
     {% if item.image %}
     <img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}">
     {% endif %}
-    <!-- <figcaption>
-      <div class="press-title">{{ item.title }}</div>
-      {% if item.caption %}<div class="press-caption">{{ item.caption }}</div>{% endif %}
-      {% if item.credit %}<div class="press-credit">{{ item.credit }}</div>{% endif %}
-    </figcaption> -->
   </figure>
   {% endfor %}
 </div>

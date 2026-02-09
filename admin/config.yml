@@ -36,3 +36,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+  - name: "press"
+    label: "Press Gallery"
+    folder: "_press"
+    create: true
+    slug: "press/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Image", name: "image", widget: "image", required: true }
+      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - { label: "Credit", name: "credit", widget: "string", required: false }
