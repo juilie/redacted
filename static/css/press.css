@@ -6,62 +6,89 @@ h1 {
   margin-top: 64px;
 }
 
-.press-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-  padding: 16px 48px;
-  max-width: 1200px;
+.press-list {
+  max-width: 900px;
   margin: 0 auto 60px;
+  padding: 0 20px;
 }
 
-.press-card {
-  margin: 0;
-  padding: 0;
+.press-article {
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
-  overflow: hidden;
+  padding: 28px;
+  margin-bottom: 24px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.press-article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.press-article-content {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
-.press-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.press-card img:hover {
-  transform: scale(1.02);
-}
-
-.press-card figcaption {
-  padding: 14px 16px 16px;
-  color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.press-title {
+.press-article-title {
+  margin: 0;
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.05rem;
+  line-height: 1.3;
 }
 
-.press-caption {
-  color: #e3e3e3;
-  font-size: 0.98rem;
+.press-article-title a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.press-credit {
-  color: #c6c6c6;
-  font-size: 0.9rem;
+.press-article-title a:hover {
+  color: #f2d9a6;
+  text-decoration: underline;
+}
+
+.press-article-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #dcdcdc;
+}
+
+.press-publication {
+  font-weight: 600;
+  color: #f2d9a6;
+}
+
+.press-date {
+  color: #aaa;
+}
+
+.press-article-media {
+  margin-top: 16px;
+  width: 100%;
+}
+
+.press-article-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.press-article-media iframe,
+.press-article-media embed {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -77,228 +104,40 @@ h1 {
     margin-right: -3rem;
   }
 
-  .press-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 14px;
-    padding: 0 12px 32px;
+  .press-list {
+    padding: 0 15px;
   }
-  .press-card img {
-    height: 190px;
+
+  .press-article {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .press-article-title {
+    font-size: 1.3rem;
+  }
+
+  .press-article-meta {
+    font-size: 0.9rem;
+    gap: 12px;
   }
 }
 
-/* Fullscreen Gallery Styles */
-.gallery-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 10000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-overlay.active {
-  display: flex;
-  opacity: 1;
-}
-
-.gallery-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  border: none;
-  background: none;
-  color: white;
-  font-size: 2.5rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10001;
-  transition: all 0.2s ease;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-  font-weight: 300;
-  text-align: center;
-}
-
-.gallery-close span {
-  display: block;
-  /* line-height: 1; */
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: -2px;
-}
-
-.gallery-close:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-.gallery-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: white;
-  font-size: 3rem;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10001;
-  transition: all 0.2s ease;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-  font-weight: 300;
-  text-align: center;
-}
-
-.gallery-nav span {
-  display: block;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: -4px;
-}
-
-.gallery-nav:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.gallery-prev {
-  left: 20px;
-}
-
-.gallery-next {
-  right: 20px;
-}
-
-.gallery-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.gallery-slider {
-  display: flex;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-
-.gallery-slide {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 20px 20px;
-  box-sizing: border-box;
-}
-
-.gallery-image {
-  max-width: 90%;
-  max-height: 75vh;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-.gallery-info {
-  margin-top: 30px;
-  text-align: center;
-  color: white;
-  max-width: 600px;
-  padding: 0 20px;
-}
-
-.gallery-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: #fff;
-}
-
-.gallery-caption {
-  font-size: 1.1rem;
-  margin: 0 0 8px 0;
-  color: #e3e3e3;
-}
-
-.gallery-credit {
-  font-size: 0.95rem;
-  margin: 0;
-  color: #c6c6c6;
-}
-
-@media (max-width: 768px) {
-  .gallery-close {
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
+@media (max-width: 480px) {
+  h1 {
     font-size: 2rem;
   }
 
-  .gallery-nav {
-    width: 50px;
-    height: 50px;
-    font-size: 2.5rem;
-  }
-
-  .gallery-prev {
-    left: 10px;
-  }
-
-  .gallery-next {
-    right: 10px;
-  }
-
-  .gallery-slide {
-    padding: 60px 10px 10px;
-  }
-
-  .gallery-image {
-    max-width: 95%;
-    max-height: 70vh;
-  }
-
-  .gallery-info {
-    margin-top: 20px;
+  .press-list {
     padding: 0 10px;
   }
 
-  .gallery-title {
-    font-size: 1.2rem;
+  .press-article {
+    padding: 16px;
+    margin-bottom: 16px;
   }
 
-  .gallery-caption {
-    font-size: 1rem;
-  }
-
-  .gallery-credit {
-    font-size: 0.9rem;
+  .press-article-title {
+    font-size: 1.1rem;
   }
 }

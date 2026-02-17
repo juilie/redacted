@@ -63,12 +63,12 @@ collections:
           - { label: "Modal Link URL", name: "modal_link", widget: "string", required: false, hint: "URL to link to (e.g., a performance page)" }
           - { label: "Modal Link Text", name: "modal_link_text", widget: "string", required: false, hint: "Text for the link button" }
   - name: "press"
-    label: "Press Gallery"
+    label: "Press"
     folder: "_press"
     create: true
     slug: "press/{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - { label: "Caption", name: "caption", widget: "string", required: false }
-      - { label: "Credit", name: "credit", widget: "string", required: false }
+      - { label: "Article Title", name: "title", widget: "string", required: true }
+      - { label: "Article Link", name: "link", widget: "string", required: true, hint: "URL to the press article" }
+      - { label: "Publication", name: "publication", widget: "string", required: false, hint: "Name of the publication or source" }
+      - { label: "Image or Embed", name: "image_embed", widget: "text", required: false, hint: "Optional: Image URL or HTML embed code (iframe, etc.)" }
