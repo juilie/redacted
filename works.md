@@ -8,11 +8,8 @@ layout: default
 <div class="works-container">
     {% assign works = site.works | sort: 'title' %}
     {% for work in works %}
-    <a href="{{ work.link | default: work.url }}" class="work-item" {% if work.link %}target="_blank" rel="noopener noreferrer"{% endif %}>
+    <a href="{{ work.url }}" class="work-item" style="background-image: url('{{ work.featured_image | relative_url }}'); background-size: cover; background-position: center;">
         <h2>{{ work.title }}</h2>
-        {% if work.description %}
-        <p>{{ work.description }}</p>
-        {% endif %}
     </a>
     {% endfor %}
 </div>

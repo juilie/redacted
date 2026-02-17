@@ -1,5 +1,7 @@
 ---
 title: 1-Way Mirror
+layout: work
+css: "/static/css/work.css"
 description: >-
   1-Way Mirror is an evening-length dance theater piece that explores themes of
   transmasculine identity.

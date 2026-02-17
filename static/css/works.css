@@ -5,6 +5,10 @@ h1 {
     padding: 20px;
     margin: 0;
     margin-top: 64px;
+    color: #fff;
+    background-color: #000;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .works-container {
@@ -20,7 +24,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 100px;
+    height: 300px;
     border: 1px solid #fff;
     background-color: #000;
     padding: 20px;
@@ -39,6 +43,20 @@ h1 {
 
 .work-item:active {
     transform: translateY(0);
+}
+
+.work-item h2 {
+    font-size: 1.5rem;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work-item h2,
@@ -165,8 +183,8 @@ h1 {
         max-width: 90%;
         margin: 15px 0;
         padding: 15px;
-        height: auto;
-        min-height: 80px;
+        /* height: auto; */
+        min-height: 300px;
     }
     
     .work-item h2 {

@@ -1,0 +1,153 @@
+.work-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.work-header h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+    display: inline-block;
+}
+
+.work-image {
+    margin: 30px 0;
+    max-width: 100%;
+}
+
+.work-image img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.work-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.work-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.work-description p {
+    margin-bottom: 1.2em;
+}
+
+.work-description strong {
+    font-weight: 700;
+    color: #fff;
+}
+
+.work-description a {
+    color: #f5d9a8;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.work-description a:hover {
+    color: #fff;
+}
+
+.work-link {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.work-link-button {
+    display: inline-block;
+    background: white;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.work-link-button:hover {
+    background: #f5d9a8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.work-link-button:active {
+    transform: translateY(0);
+}
+
+.work-back {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #f5d9a8;
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .work-page {
+        padding: 20px 15px;
+    }
+
+    .work-header h1 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .work-content {
+        padding: 25px 20px;
+    }
+
+    .work-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .work-link-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-header h1 {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+
+    .work-content {
+        padding: 20px 15px;
+    }
+
+    .work-description {
+        font-size: 0.95rem;
+    }
+}
