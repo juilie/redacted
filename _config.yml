@@ -10,6 +10,9 @@ github_username:  juilie
 plugins:
   - jekyll-feed
 
+plugins_dir:
+  - _plugins
+
 collections:
   works:
     output: true

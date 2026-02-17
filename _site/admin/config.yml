@@ -26,8 +26,9 @@ collections:
     slug: "works/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "markdown", required: true }
+      - { label: "Description", name: "description", widget: "markdown", required: true, hint: "You can include video links (YouTube, Vimeo, etc.) - they will automatically be converted to embeds. Or paste HTML iframe embed code directly." }
       - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Featured Video", name: "video_url", widget: "string", required: false, hint: "Enter video URL (YouTube, Vimeo, etc.) or paste full iframe embed code. This will be displayed as an embedded video at the top of the page." }
       - { label: "Link", name: "link", widget: "string", required: false }
   - name: "pages"
     label: "Pages"

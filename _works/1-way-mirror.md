@@ -46,5 +46,6 @@ description: >-
 
   [Profile and Review](<Press: Thinking Dance Review by Madeline Shuron Profile and Review by Sophia Halimah Parker for Gryllus>) by Sophia Halimah Parker for Gryllus
 featured_image: /static/uploads/screenshot-2026-02-16-at-10.12.16 pm.png
+video_url: https://www.youtube.com/watch?v=3o-DCxNW_cA
 link: https://www.youtube.com/watch?v=TCmDM3O1CXQ
 ---

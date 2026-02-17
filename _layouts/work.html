@@ -5,7 +5,11 @@ layout: default
 <div class="work-page">
   <div class="work-header">
     <h1>「{{ page.title }}」</h1>
-    {% if page.featured_image %}
+    {% if page.video_url %}
+    <div class="work-video">
+      {{ page.video_url | video_embed }}
+    </div>
+    {% elsif page.featured_image %}
     <div class="work-image">
       <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
     </div>
@@ -13,11 +17,14 @@ layout: default
   </div>
 
   <div class="work-content">
+
     <div class="work-description">
       {% if page.description %}
-        {{ page.description | markdownify }}
+        {% assign desc_with_embeds = page.description | video_embed_from_markdown %}
+        {{ desc_with_embeds | markdownify }}
       {% endif %}
-      {{ content }}
+      {% assign content_with_embeds = content | video_embed_from_markdown %}
+      {{ content_with_embeds }}
     </div>
 
     {% if page.link %}
