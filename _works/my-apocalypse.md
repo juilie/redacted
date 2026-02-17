@@ -57,10 +57,10 @@ description: >-
   ## Video Documentation:
 
 
-  Judson Church Performance
+  [Judson Church Performance](https://www.youtube.com/watch?v=TCmDM3O1CXQ)
 
 
-  Hannah Traore Gallery Excerpt
+  [Hannah Traore Gallery Excerpt](https://www.youtube.com/watch?v=GOiN-Hj2XbI)
 featured_image: /static/uploads/screenshot-2026-02-17-at-12.55.08 am.png
 video_url: https://www.youtube.com/watch?v=TCmDM3O1CXQ
 ---
