@@ -1,7 +1,7 @@
 ---
 title: My Apocalypse
 layout: work
-css: "/static/css/work.css"
+css: /static/css/work.css
 description: >-
   **Choreographed and Directed by:** Mimi Doan and Cole Stapleton
 
@@ -61,6 +61,6 @@ description: >-
 
 
   Hannah Traore Gallery Excerpt
-featured_image: /static/uploads/screenshot-2026-02-17-at-12.55.08 am.png
+featured_image: /static/uploads/screenshot-2026-02-17-at-12.55.08 am.png
 video_url: https://www.youtube.com/watch?v=TCmDM3O1CXQ
 ---
