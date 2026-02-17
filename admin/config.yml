@@ -12,10 +12,10 @@ collections:
     create: true
     slug: "performances/{{slug}}"
     sort_by: "date"
-    summary: "{{date | date: 'MMM D, YYYY @ h:mm A'}} - {{title}}"
+    summary: "{{title}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - {label: "Performance Date", name: "date", widget: "datetime", required: false}
+      - {label: "Performance Date", name: "date", widget: "datetime", required: false, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "MMM D, YYYY", time_format: "h:mm A"}
       - { label: "Description", name: "description", widget: "markdown", required: false }
       - { label: "Link", name: "link", widget: "string", required: false }
       - { label: "Location", name: "location", widget: "string", required: true }
@@ -52,6 +52,11 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Site Settings"
+        name: "settings"
+        file: "settings.md"
+        fields:
+          - { label: "Marquee Text", name: "marquee_text", widget: "string", hint: "Text to display in the scrolling marquee at the top of the site" }
   - name: "press"
     label: "Press Gallery"
     folder: "_press"

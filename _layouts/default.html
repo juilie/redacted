@@ -92,28 +92,16 @@
   </script>
   <div class="marquee">
     <div class="marquee-content">
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
+        {% assign settings_file = site.pages | where: "path", "settings.md" | first %}
+        {% assign marquee_text = settings_file.marquee_text | default: site.marquee_text | default: "REDACTED" %}
+        {% for i in (1..10) %}
+        <span>{{ marquee_text }}</span>
+        {% endfor %}
     </div>
     <div class="marquee-content" aria-hidden="true">
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
-        <span>REDACTED</span>
+        {% for i in (1..10) %}
+        <span>{{ marquee_text }}</span>
+        {% endfor %}
     </div>
   </div>
   {% unless page.url == '/' or page.url == '/index.html' %}
