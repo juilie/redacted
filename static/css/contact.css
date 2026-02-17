@@ -1,4 +1,4 @@
-.about-content {
+.contact-content {
     max-width: 900px;
     margin: 40px auto 80px;
     padding: 28px 28px 36px;
@@ -8,10 +8,12 @@
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     line-height: 1.7;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin: 0 0 18px;
     letter-spacing: 0.03em;
     text-align: center;
@@ -19,6 +21,8 @@ h1 {
     background-color: #000;
     color: #fff;
     margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 32px;
 }
 
 .about-content h2 {
