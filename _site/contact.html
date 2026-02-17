@@ -8,24 +8,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
   <meta name="generator" content="Jekyll v4.3.3" />
-  <meta property="og:title" content="Home" />
+  <meta property="og:title" content="Contact" />
   <meta property="og:locale" content="en_US" />
   <meta name="description" content="A website for Redacted" />
   <meta property="og:description" content="A website for Redacted" />
-  <link rel="canonical" href="http://localhost:4000/" />
-  <meta property="og:url" content="http://localhost:4000/" />
+  <link rel="canonical" href="http://localhost:4000/contact.html" />
+  <meta property="og:url" content="http://localhost:4000/contact.html" />
   <meta property="og:site_name" content="Redacted" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Home" />
+  <meta property="twitter:title" content="Contact" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "description": "A website for Redacted",
-      "headline": "Home",
+      "headline": "Contact",
       "name": "Redacted",
-      "url": "http://localhost:4000/"
+      "url": "http://localhost:4000/contact.html"
     }
   </script>
   <!-- End Jekyll SEO tag -->
@@ -33,11 +33,11 @@
   <!-- <link rel="stylesheet" href="/static/css/default.css"> -->
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Redacted" />
 
-  <title>Home</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="/static/css/default.css">
   <!-- Page-specific CSS -->
   
-  <link rel="stylesheet" href="/static/css/home.css">
+  <link rel="stylesheet" href="/static/css/contact.css">
   
 </head>
 
@@ -117,17 +117,37 @@
     </div>
   </div>
   
-  <main>
-    <div class="content">
-        <h1>「Redacted」</h1>
-        <ul class="nav-links">
-            <li><a href="/works">Works</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/performances">Upcoming Performances</a></li>
-            <li><a href="/press">Press</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
+  <nav class="site-nav-bar">
+    <a href="/" class="site-brand">「Redacted」</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <div class="site-nav-links">
+      <a href="/works">Works</a>
+      <a href="/performances">Performances</a>
+      <a href="/press">Press</a>
+      <a href="/about">About</a>
     </div>
+  </nav>
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav-bar');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('nav-open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          toggle.textContent = isOpen ? 'Close' : 'Menu';
+        });
+      }
+    })();
+  </script>
+  
+  <main>
+    <h1>「Contact」</h1>
+<div class="about-content">
+  <p>companyredacted@gmail.com
+@redacted.gay</p>
+
+</div>
 
   </main>
 </body>
