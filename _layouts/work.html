@@ -26,15 +26,6 @@ layout: default
       {% assign content_with_embeds = content | video_embed_from_markdown %}
       {{ content_with_embeds }}
     </div>
-
-    {% if page.link %}
-    <div class="work-link">
-      <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="work-link-button">
-        View Video
-      </a>
-    </div>
-    {% endif %}
-
     <div class="work-back">
       <a href="/works" class="back-link">← Back to Works</a>
     </div>
