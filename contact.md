@@ -1,13 +1,8 @@
 ---
 title: Contact
-layout: default
+layout: about
 css: "/static/css/contact.css"
 body: |
-  companyredacted@gmail.com
-  @redacted.gay
+  <p>companyredacted@gmail.com</p>
+  <p>@redacted.gay</p>
 ---
-
-<h1>「Contact」</h1>
-<div class="about-content">
-  {{ page.body | markdownify }}
-</div>
