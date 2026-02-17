@@ -30,4 +30,139 @@ layout: default
       <a href="/works" class="back-link">← Back to Works</a>
     </div>
   </div>
+
+  {% if page.gallery and page.gallery.size > 0 %}
+  <div class="work-gallery-section">
+    <h2 class="gallery-title">Gallery</h2>
+    <div class="work-gallery">
+      {% for image in page.gallery %}
+        {% if image.image %}
+          <div class="work-gallery-item">
+            <img src="{{ image.image | relative_url }}" alt="{{ image.image | split: '/' | last }}" class="work-gallery-image" data-gallery-index="{{ forloop.index0 }}" data-gallery-src="{{ image.image | relative_url }}">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Fullscreen Gallery Overlay -->
+  <div class="work-gallery-overlay" id="work-gallery-overlay">
+    <button class="gallery-close" id="work-gallery-close" aria-label="Close gallery"><span>&times;</span></button>
+    <button class="gallery-nav gallery-prev" id="work-gallery-prev" aria-label="Previous image"><span>‹</span></button>
+    <button class="gallery-nav gallery-next" id="work-gallery-next" aria-label="Next image"><span>›</span></button>
+    <div class="gallery-container">
+      <div class="gallery-slider" id="work-gallery-slider">
+        {% for image in page.gallery %}
+        {% if image.image %}
+        <div class="gallery-slide">
+          <img src="{{ image.image | relative_url }}" alt="{{ image.image | split: '/' | last }}" class="gallery-image">
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const galleryOverlay = document.getElementById('work-gallery-overlay');
+    const gallerySlider = document.getElementById('work-gallery-slider');
+    const galleryClose = document.getElementById('work-gallery-close');
+    const galleryPrev = document.getElementById('work-gallery-prev');
+    const galleryNext = document.getElementById('work-gallery-next');
+    const galleryImages = document.querySelectorAll('.work-gallery-image');
+    
+    let currentIndex = 0;
+    let totalSlides = 0;
+
+    function initGallery() {
+      totalSlides = document.querySelectorAll('#work-gallery-slider .gallery-slide').length;
+      if (totalSlides === 0) return;
+
+      galleryImages.forEach((img, index) => {
+        img.addEventListener('click', () => openGallery(index));
+      });
+
+      galleryClose.addEventListener('click', closeGallery);
+      galleryPrev.addEventListener('click', () => navigateGallery(-1));
+      galleryNext.addEventListener('click', () => navigateGallery(1));
+
+      galleryOverlay.addEventListener('click', (e) => {
+        if (e.target === galleryOverlay) {
+          closeGallery();
+        } else if (e.target.classList.contains('gallery-image')) {
+          navigateGallery(1);
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        if (e.key === 'Escape') closeGallery();
+        else if (e.key === 'ArrowLeft') navigateGallery(-1);
+        else if (e.key === 'ArrowRight') navigateGallery(1);
+      });
+
+      setupSwipeGestures();
+    }
+
+    function setupSwipeGestures() {
+      let touchStartX = 0;
+      let touchEndX = 0;
+      const minSwipeDistance = 50;
+
+      galleryOverlay.addEventListener('touchstart', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      galleryOverlay.addEventListener('touchmove', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        const deltaX = e.touches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > Math.abs(e.touches[0].clientY - touchStartX)) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      galleryOverlay.addEventListener('touchend', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        touchEndX = e.changedTouches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+        if (Math.abs(deltaX) > minSwipeDistance) {
+          if (deltaX > 0) navigateGallery(-1);
+          else navigateGallery(1);
+        }
+      }, { passive: true });
+    }
+
+    function openGallery(index) {
+      currentIndex = index;
+      updateGalleryPosition();
+      galleryOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      galleryOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function navigateGallery(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      else if (currentIndex >= totalSlides) currentIndex = 0;
+      updateGalleryPosition();
+    }
+
+    function updateGalleryPosition() {
+      gallerySlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGallery);
+    } else {
+      initGallery();
+    }
+  })();
+  </script>
+  {% endif %}
 </div>

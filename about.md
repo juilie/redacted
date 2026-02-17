@@ -46,9 +46,5 @@ body: |
 ---
 
 <div class="about-content">
-  {% if page.body %}
-    {{ page.body | markdownify }}
-  {% else %}
-    {{ content }}
-  {% endif %}
+  {{ page.body | markdownify }}
 </div>

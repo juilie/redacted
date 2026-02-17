@@ -1,6 +1,5 @@
 .work-page {
-    
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
     color: #fff;
@@ -8,12 +7,12 @@
 
 .work-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .work-header h1 {
     font-size: 3rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #fff;
     background-color: #000;
     padding: 20px;
@@ -21,16 +20,22 @@
 }
 
 .work-image {
-    margin: 30px 0;
+    margin: 20px 0 30px 0;
     max-width: 100%;
+    max-height: 35vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .work-image img {
     width: 100%;
     height: auto;
-    max-width: 800px;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    max-height: 35vh;
+    object-fit: contain;
+    /* border: 2px solid #fff; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 
 .work-video {
@@ -65,19 +70,25 @@
     left: 0;
     width: 100%;
     height: 100%;
+    
 }
 
 .work-content {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 20px;
 }
 
 .work-description {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.work-description > *:first-child {
+    margin-top: 0;
 }
 
 .work-description p {
@@ -184,5 +195,222 @@
 
     .work-description {
         font-size: 0.95rem;
+    }
+}
+
+/* Work Gallery Styles */
+.work-gallery-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #000;
+    padding: 15px 30px;
+    display: inline-block;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.work-gallery-item {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.work-gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.work-gallery-item:hover .work-gallery-image {
+    transform: scale(1.05);
+}
+
+/* Fullscreen Gallery Overlay */
+.work-gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work-gallery-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.work-gallery-overlay .gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    transition: all 0.2s ease;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+.work-gallery-overlay .gallery-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.work-gallery-overlay .gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    transition: all 0.2s ease;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+.work-gallery-overlay .gallery-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.work-gallery-overlay .gallery-prev {
+    left: 20px;
+}
+
+.work-gallery-overlay .gallery-next {
+    right: 20px;
+}
+
+.work-gallery-overlay .gallery-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.work-gallery-overlay .gallery-slider {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.work-gallery-overlay .gallery-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 20px;
+    box-sizing: border-box;
+}
+
+.work-gallery-overlay .gallery-image {
+    max-width: 90%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .work-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .work-gallery-image {
+        height: 200px;
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+        padding: 12px 20px;
+    }
+
+    .work-gallery-overlay .gallery-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+
+    .work-gallery-overlay .gallery-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+    }
+
+    .work-gallery-overlay .gallery-prev {
+        left: 10px;
+    }
+
+    .work-gallery-overlay .gallery-next {
+        right: 10px;
+    }
+
+    .work-gallery-overlay .gallery-slide {
+        padding: 60px 10px 10px;
+    }
+
+    .work-gallery-overlay .gallery-image {
+        max-width: 95%;
+        max-height: 70vh;
     }
 }

@@ -29,15 +29,29 @@ module Jekyll
       return text unless text.is_a?(String)
       
       # Convert YouTube links in markdown to embeds
-      text = text.gsub(/\[([^\]]+)\]\((https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+))\)/) do |match|
+      # Handle URLs with query parameters (like &t=47s)
+      text = text.gsub(/\[([^\]]+)\]\((https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)[^\)]*)\)/) do |match|
         video_id = $3
         %(<div class="video-embed"><iframe src="https://www.youtube.com/embed/#{video_id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>)
       end
       
-      # Convert Vimeo links in markdown to embeds
-      text = text.gsub(/\[([^\]]+)\]\((https?:\/\/(?:www\.)?vimeo\.com\/(\d+))\)/) do |match|
+      # Convert Vimeo links in markdown to embeds, but skip if password-protected
+      # Match Vimeo link and capture any text that follows on the same line
+      text = text.gsub(/\[([^\]]+)\]\((https?:\/\/(?:www\.)?vimeo\.com\/(\d+))\)\s*([^\n\[\<]{0,200})/m) do |full_match|
+        link_text = $1
+        video_url = $2
         video_id = $3
-        %(<div class="video-embed"><iframe src="https://player.vimeo.com/video/#{video_id}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>)
+        text_after = ($4 || '').strip
+        
+        # Check if password is mentioned in the text after the link
+        if text_after.match?(/password/i)
+          # Keep as link if password-protected, preserve the text after
+          %([#{link_text}](#{video_url})#{text_after.empty? ? '' : ' ' + text_after})
+        else
+          # Convert to embed if no password, preserve the text after
+          embed_html = %(<div class="video-embed"><iframe src="https://player.vimeo.com/video/#{video_id}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>)
+          text_after.empty? ? embed_html : embed_html + ' ' + text_after
+        end
       end
       
       text

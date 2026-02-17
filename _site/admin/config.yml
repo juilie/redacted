@@ -12,7 +12,7 @@ collections:
     create: true
     slug: "performances/{{slug}}"
     sort_by: "date"
-    summary: "{{date}} - {{title}}"
+    summary: "{{date | date: 'MMM D, YYYY @ h:mm A'}} - {{title}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - {label: "Performance Date", name: "date", widget: "datetime", required: false}
@@ -30,6 +30,13 @@ collections:
       - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
       - { label: "Featured Video", name: "video_url", widget: "string", required: false, hint: "Enter video URL (YouTube, Vimeo, etc.) or paste full iframe embed code. This will be displayed as an embedded video at the top of the page." }
       - { label: "Link", name: "link", widget: "string", required: false }
+      - label: "Gallery Images"
+        name: "gallery"
+        widget: "list"
+        required: false
+        hint: "Add photos that will appear in a gallery at the bottom of the work page."
+        fields:
+          - { label: "Image", name: "image", widget: "image", required: true }
   - name: "pages"
     label: "Pages"
     files:
@@ -38,6 +45,11 @@ collections:
         file: "about.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "contact.md"
+        fields:
           - { label: "Body", name: "body", widget: "markdown" }
   - name: "press"
     label: "Press Gallery"
