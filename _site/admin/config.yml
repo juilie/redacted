@@ -57,6 +57,11 @@ collections:
         file: "settings.md"
         fields:
           - { label: "Marquee Text", name: "marquee_text", widget: "string", hint: "Text to display in the scrolling marquee at the top of the site" }
+          - { label: "Enable Modal", name: "modal_enabled", widget: "boolean", default: false, hint: "Show a popup modal when visitors first arrive" }
+          - { label: "Modal Title", name: "modal_title", widget: "string", required: false, hint: "Title for the popup modal" }
+          - { label: "Modal Content", name: "modal_content", widget: "markdown", required: false, hint: "Content to display in the modal" }
+          - { label: "Modal Link URL", name: "modal_link", widget: "string", required: false, hint: "URL to link to (e.g., a performance page)" }
+          - { label: "Modal Link Text", name: "modal_link_text", widget: "string", required: false, hint: "Text for the link button" }
   - name: "press"
     label: "Press Gallery"
     folder: "_press"

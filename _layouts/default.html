@@ -129,6 +129,74 @@
     })();
   </script>
   {% endunless %}
+
+  {% assign settings_file = site.pages | where: "path", "settings.md" | first %}
+  {% if settings_file.modal_enabled and settings_file.modal_content and settings_file.modal_content != "" %}
+  <!-- Site Modal -->
+  <div class="site-modal" id="site-modal">
+    <div class="site-modal-overlay"></div>
+    <div class="site-modal-content">
+      <button class="site-modal-close" id="site-modal-close" aria-label="Close modal">&times;</button>
+      {% if settings_file.modal_title and settings_file.modal_title != "" %}
+      <h2 class="site-modal-title">{{ settings_file.modal_title }}</h2>
+      {% endif %}
+      <div class="site-modal-body">
+        {{ settings_file.modal_content | markdownify }}
+      </div>
+      {% if settings_file.modal_link and settings_file.modal_link != "" %}
+      <div class="site-modal-footer">
+        <a href="{{ settings_file.modal_link }}" class="site-modal-button">{{ settings_file.modal_link_text | default: "Learn More" }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const modal = document.getElementById('site-modal');
+      const closeBtn = document.getElementById('site-modal-close');
+      
+      if (!modal) return;
+
+      // Check if modal was already dismissed in this session
+      const modalDismissed = sessionStorage.getItem('site-modal-dismissed');
+      if (modalDismissed) {
+        modal.style.display = 'none';
+        return;
+      }
+
+      // Show modal after a short delay
+      setTimeout(function() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }, 500);
+
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('site-modal-dismissed', 'true');
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+      }
+
+      // Close on overlay click
+      const overlay = modal.querySelector('.site-modal-overlay');
+      if (overlay) {
+        overlay.addEventListener('click', closeModal);
+      }
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+  {% endif %}
+
   <main>
     {{ content }}
   </main>
