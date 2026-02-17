@@ -1,7 +1,7 @@
 ---
 title: Monster Cruising
 layout: work
-css: "/static/css/work.css"
+css: /static/css/work.css
 description: >-
   **Choreographed by:** Mimi Doan and Cole Stapleton
 
@@ -34,6 +34,6 @@ description: >-
 
 
   [Performance Video](https://www.youtube.com/watch?v=E7oxBOEbPzs&t=47s)
-featured_image: /static/uploads/screenshot-2026-02-17-at-12.55.28 am.png
+featured_image: /static/uploads/screenshot-2026-02-17-at-12.55.28 am.png
 video_url: https://www.youtube.com/watch?v=E7oxBOEbPzs&t=47s
 ---
