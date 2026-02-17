@@ -18,17 +18,19 @@ css: "/static/css/press.css"
         <span class="press-publication">{{ article.publication }}</span>
         {% endif %}
       </div>
-      {% if article.image %}
-      <div class="press-article-media">
-        <img src="{{ article.image | relative_url }}" alt="{{ article.title | escape }}" class="press-article-image">
-      </div>
-      {% elsif article.image_embed %}
+      {% if article.image_embed and article.image_embed != "" %}
       <div class="press-article-media">
         {% if article.image_embed contains '<iframe' or article.image_embed contains '<embed' %}
           {{ article.image_embed }}
         {% else %}
           <img src="{{ article.image_embed | relative_url }}" alt="{{ article.title | escape }}" class="press-article-image">
         {% endif %}
+      </div>
+      {% elsif article.image and article.image != "" %}
+      <div class="press-article-media">
+        <a href="{{ article.link }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ article.image | relative_url }}" alt="{{ article.title | escape }}" class="press-article-image">
+        </a>
       </div>
       {% endif %}
     </div>
