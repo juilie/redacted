@@ -23,7 +23,7 @@ collections:
     label: "Works"
     folder: "_works"
     create: true
-    slug: "works/{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "markdown", required: true, hint: "You can include video links (YouTube, Vimeo, etc.) - they will automatically be converted to embeds. Or paste HTML iframe embed code directly." }
