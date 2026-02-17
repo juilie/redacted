@@ -11,6 +11,8 @@ collections:
     folder: "_performances"
     create: true
     slug: "performances/{{slug}}"
+    sort_by: "date"
+    summary: "{{date}} - {{title}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - {label: "Performance Date", name: "date", widget: "datetime", required: false}
@@ -25,7 +27,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "markdown", required: true }
-      - { label: "Video", name: "video", widget: "file", required: false }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
       - { label: "Link", name: "link", widget: "string", required: false }
   - name: "pages"
     label: "Pages"
