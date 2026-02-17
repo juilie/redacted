@@ -94,13 +94,14 @@
     <div class="marquee-content">
         {% assign settings_file = site.pages | where: "path", "settings.md" | first %}
         {% assign marquee_text = settings_file.marquee_text | default: site.marquee_text | default: "REDACTED" %}
+        {% assign marquee_processed = marquee_text | markdownify | strip_html %}
         {% for i in (1..10) %}
-        <span>{{ marquee_text }}</span>
+        <span>{{ marquee_text | markdownify }}</span>
         {% endfor %}
     </div>
     <div class="marquee-content" aria-hidden="true">
         {% for i in (1..10) %}
-        <span>{{ marquee_text }}</span>
+        <span>{{ marquee_text | markdownify }}</span>
         {% endfor %}
     </div>
   </div>
@@ -158,11 +159,21 @@
       
       if (!modal) return;
 
-      // Check if modal was already dismissed in this session
-      const modalDismissed = sessionStorage.getItem('site-modal-dismissed');
+      // Check if modal was already dismissed (persists for 7 days)
+      const modalDismissed = localStorage.getItem('site-modal-dismissed');
       if (modalDismissed) {
-        modal.style.display = 'none';
-        return;
+        const dismissedTime = parseInt(modalDismissed, 10);
+        const now = Date.now();
+        const sevenDays = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+        
+        // If dismissed less than 7 days ago, don't show
+        if (now - dismissedTime < sevenDays) {
+          modal.style.display = 'none';
+          return;
+        } else {
+          // Expired, clear it
+          localStorage.removeItem('site-modal-dismissed');
+        }
       }
 
       // Show modal after a short delay
@@ -174,7 +185,8 @@
       function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
-        sessionStorage.setItem('site-modal-dismissed', 'true');
+        // Store current timestamp
+        localStorage.setItem('site-modal-dismissed', Date.now().toString());
       }
 
       if (closeBtn) {

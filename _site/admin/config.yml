@@ -56,7 +56,7 @@ collections:
         name: "settings"
         file: "settings.md"
         fields:
-          - { label: "Marquee Text", name: "marquee_text", widget: "string", hint: "Text to display in the scrolling marquee at the top of the site" }
+          - { label: "Marquee Text", name: "marquee_text", widget: "string", hint: "Text to display in the scrolling marquee. You can include markdown links like [link text](/url) within the text." }
           - { label: "Enable Modal", name: "modal_enabled", widget: "boolean", default: false, hint: "Show a popup modal when visitors first arrive" }
           - { label: "Modal Title", name: "modal_title", widget: "string", required: false, hint: "Title for the popup modal" }
           - { label: "Modal Content", name: "modal_content", widget: "markdown", required: false, hint: "Content to display in the modal" }
