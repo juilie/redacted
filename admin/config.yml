@@ -71,4 +71,5 @@ collections:
       - { label: "Article Title", name: "title", widget: "string", required: true }
       - { label: "Article Link", name: "link", widget: "string", required: true, hint: "URL to the press article" }
       - { label: "Publication", name: "publication", widget: "string", required: false, hint: "Name of the publication or source" }
-      - { label: "Image or Embed", name: "image_embed", widget: "text", required: false, hint: "Optional: Image URL or HTML embed code (iframe, etc.)" }
+      - { label: "Image", name: "image", widget: "image", required: false, hint: "Upload an image for this press article" }
+      - { label: "Image or Embed", name: "image_embed", widget: "text", required: false, hint: "Optional: Image URL or HTML embed code (iframe, etc.). Only used if no image is uploaded above." }

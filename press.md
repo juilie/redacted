@@ -17,11 +17,12 @@ css: "/static/css/press.css"
         {% if article.publication %}
         <span class="press-publication">{{ article.publication }}</span>
         {% endif %}
-        {% if article.date %}
-        <span class="press-date">{{ article.date | date: "%B %Y" }}</span>
-        {% endif %}
       </div>
-      {% if article.image_embed %}
+      {% if article.image %}
+      <div class="press-article-media">
+        <img src="{{ article.image | relative_url }}" alt="{{ article.title | escape }}" class="press-article-image">
+      </div>
+      {% elsif article.image_embed %}
       <div class="press-article-media">
         {% if article.image_embed contains '<iframe' or article.image_embed contains '<embed' %}
           {{ article.image_embed }}
