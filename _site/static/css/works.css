@@ -131,6 +131,12 @@ h1 {
     align-items: flex-end;
 }
 
+.performance-image {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 12px;
+}
+
 .performance-date-strong {
     font-weight: 700;
     font-size: 1.05rem;
@@ -150,6 +156,15 @@ h1 {
 .performance-venue {
     font-size: 0.95rem;
     color: #dcdcdc;
+}
+
+.performance-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .performance-location-strong {
@@ -267,6 +282,7 @@ h1 {
     .performance-location-strong {
         text-align: center;
         font-size: 1.05rem;
+        width: 100%;
     }
 
     .performance-title {
@@ -315,6 +331,10 @@ h1 {
 
     .performance-card {
         padding: 12px 10px;
+    }
+
+    .performance-card-with-image {
+        padding: 16px 10px;
     }
 
     .performance-title {
