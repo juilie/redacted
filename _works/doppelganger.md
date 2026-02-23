@@ -28,12 +28,5 @@ description: >-
 
 
   Nos En Vera Artist Residency Performance, July 2024
-
-
-
-  ## Video Documentation:
-
-
-  [Performance Video](https://vimeo.com/994808037) (password: ba2024)
-featured_image: /static/uploads/screenshot-2026-02-16-at-10.59.51 pm.png
+featured_image: /static/uploads/img_5555.jpg
 ---
