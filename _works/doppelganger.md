@@ -29,4 +29,9 @@ description: >-
 
   Nos En Vera Artist Residency Performance, July 2024
 featured_image: /static/uploads/img_5555.jpg
+gallery:
+  - image: /static/uploads/img_5557.jpg
+  - image: /static/uploads/screenshot-2026-02-16-at-10.59.51 pm.png
+  - image: /static/uploads/img_5572.jpg
+  - image: /static/uploads/img_5565.jpg
 ---
