@@ -31,7 +31,7 @@ description: >-
   [NYU Excerpt](<>)
 
 
-  #### Credits:
+  ## Credits:
 
 
   Choreographed and Performed by: Mimi Doan & Cole Stapleton
@@ -58,7 +58,7 @@ description: >-
   Production Support and Stage Management: Jean Park, Paul Liu & Logan Kerr
 
 
-  #### **Performances:**
+  ## **Performances:**
 
 
   NYU Development Lab for Dance, 9/2025
