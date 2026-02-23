@@ -7,16 +7,7 @@ description: >-
   transmasculine identity.*
 
 
-  1-Way Mirror started with a personal question: are you still your mother’s daughter if you are no longer a woman? To embark on this disentanglement, we developed a practice of ‘doppelgangering’, an experiment of psychoanalytic introjection (the unconscious adoption of another’s characteristics). The practice involves uninterrupted durational mirroring; investigating queerness retroactively through our childhoods. The resulting scores utilize vectors, intuitive movement and layered monologue. In a political reality defined by polarization, we aim to explore conflict, power and dependency from a point of convergence.
-
-
-  ### **Video Documentation:**
-
-
-  [Teaser](<>)
-
-
-  [NYU Excerpt](<>)
+  1-Way Mirror started with a personal question: are you still your mother’s daughter if you are no longer a woman? To embark on this disentanglement, we developed a practice of ‘doppelgangering’, an experiment of psychoanalytic introjection (the unconscious adoption of another’s characteristics). The practice involves uninterrupted durational mirroring; investigating queerness retroactively through our childhoods. The resulting scores utilize vectors, intuitive movement and layered monologue. In a political reality defined by polarization, we aim to explore conflict, power and dependency from a point of convergence.[](<>)
 
 
   > “Doan, Stapleton, and Vega weave a complex tale of identity and the safety of you-as-other in this forty-five minute show. Through themes of emotional incest they glide and throw themselves around the floor, rolling and cavorting with one another through vignettes of figures: idealized younger selves craving attention, idealized present selves dancing on mirrors. It’s a creepy, unsettling piece that navigates identity and relationships in beautiful, fractured ways.” - [Madeline Shuron, Thinking Dance ](https://thinkingdance.net/articles/2025/09/29/reflections-refractions-and-remembering-a-look-at-1-way-mirror/)
@@ -31,6 +22,13 @@ description: >-
   [Profile and Review](<>) by Sophia Halimah Parker for Gryllus
 
 
+  ### **Video Documentation:**
+
+
+  [Teaser](<>)
+
+
+  [NYU Excerpt](<>)
 
 
   #### Credits:
@@ -58,8 +56,6 @@ description: >-
 
 
   Production Support and Stage Management: Jean Park, Paul Liu & Logan Kerr
-
-
 
 
   #### **Performances:**
