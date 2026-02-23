@@ -1,18 +1,9 @@
 ---
-title: Doppelganger
+title: "Doppelganger "
 layout: work
 css: /static/css/work.css
 description: >-
-  **Choreographed by**: Mimi Doan and Cole Stapleton
-
-
-  **Performed by**: Cole Stapleton, Mimi Doan, David Attenberger, and⁠ Avery Gerhardt
-
-
-  **Music by**: Arthur Russel
-
-
-  **Run Time**: 35 minutes
+  ### Nos En Vera Artist Residency Performance, July 2024
 
 
   *Doppelganger emerged from research conducted during \[Redacted]'s 2024 artist residency at Nos En Vera in Buenos Aires, which later developed into the evening-length work 1-Way Mirror.*
@@ -24,14 +15,21 @@ description: >-
   *Textual references: Naomi Klein's* Doppelganger*, Melanie Klein's* The Psychoanalysis of Children *and* La Batard *by Violet Leduc*
 
 
-  ## Performances:
+  **Choreographed by**: Mimi Doan and Cole Stapleton
 
 
-  Nos En Vera Artist Residency Performance, July 2024
-featured_image: /static/uploads/img_5555.jpg
+  **Performed by**: Cole Stapleton, Mimi Doan, David Attenberger, and⁠ Avery Gerhardt
+
+
+  **Music by**: Arthur Russel
+
+
+  **Run Time**: 35 minutes
+featured_image: /static/uploads/img_5568.jpg
 gallery:
   - image: /static/uploads/img_5557.jpg
   - image: /static/uploads/screenshot-2026-02-16-at-10.59.51 pm.png
   - image: /static/uploads/img_5572.jpg
   - image: /static/uploads/img_5565.jpg
+  - image: /static/uploads/img_5555.jpg
 ---
