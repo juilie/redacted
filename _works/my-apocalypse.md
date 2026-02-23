@@ -42,16 +42,7 @@ description: >-
   Movement Research at Judson Church, 6/2023
 
 
-  *Inspired by Samuel Delaney's Time Square Red Time Square*
-
-
-  *Blue, "My Apocalypse" invites audiences to the edge of personal and societal collapse. From the pulsating shadows of Time Square's now vanished porn theaters Delaney writes about his personal encounters while cruising, and emphasizes the multilayered value that these institutions had. Although at the time he is writing the porn theaters have not yet been replaced by highrises, their demise is imminent, and it is this perspective that interested us as we embarked on the creation of "My Apocalypse".*
-
-
-  *What does it mean to love something you know will be destroyed?*
-
-
-  *What is the sound of one person's plea in the mouth of the capitalist wheel?*
+  *Inspired by Samuel Delaney's Time Square Red Time Square Blue, "My Apocalypse" invites audiences to the edge of personal and societal collapse. From the pulsating shadows of Time Square's now vanished porn theaters Delaney writes about his personal encounters while cruising, and emphasizes the multilayered value that these institutions had. Although at the time he is writing the porn theaters have not yet been replaced by highrises, their demise is imminent, and it is this perspective that interested us as we embarked on the creation of "My Apocalypse". What does it mean to love something you know will be destroyed? What is the sound of one person's plea in the mouth of the capitalist wheel?*
 
 
   ## Video Documentation:
