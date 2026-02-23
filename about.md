@@ -4,21 +4,13 @@ layout: about
 css: /static/css/about.css
 ---
 <h1>「Redacted」</h1>
-\*A Choreographic collaboration by Mimi Doan and Cole Stapleton\*
+\\*A Choreographic collaboration by Mimi Doan and Cole Stapleton\\*
 
-
-
-![](/static/uploads/redacted_joohee-park-.jpeg)
-
-Using fantasy as a guide towards creation, Mimi Doan and Cole Stapleton have been collaborating as choreographers since 2019. \[redacted] utilizes the fantasy of situation and circumstance, emotion and play to create dynamic worlds for their pieces.
+Using fantasy as a guide towards creation, Mimi Doan and Cole Stapleton have been collaborating as choreographers since 2020. \[redacted] utilizes the fantasy of situation and circumstance, emotion and play to create dynamic worlds for their pieces.
 
 Their work has been presented at Performance Mix Festival #38, Movement Research at Judson Church, The Philadelphia Fringe Festival and at art galleries throughout New York City.
 
 \[redacted] has received grant support from the NYFA Queens Art Fund, NYU Artist Development Program for Dance, Foundation for Contemporary Art and has been awarded residencies at Impulstanz in Vienna, Kulturfactory in Naples and Nos En Vera in Buenos Aires.
-
-
-
-
 
 ## Residencies & Grant Awards
 
