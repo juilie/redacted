@@ -25,6 +25,9 @@ layout: default
             </div>
             {% endif %}
             <div class="performance-title">{{ performance.title }}</div>
+            {% if performance.venue %}
+            <div class="performance-venue-name">{{ performance.venue }}</div>
+            {% endif %}
             {% if description_text != '' %}
             <div class="performance-venue">{{ description_text | markdownify }}</div>
             {% endif %}

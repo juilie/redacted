@@ -153,6 +153,14 @@ h1 {
     max-width: 100%;
 }
 
+.performance-venue-name {
+    font-size: 0.85rem;
+    color: #aaa;
+    font-style: italic;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
 .performance-venue {
     font-size: 0.95rem;
     color: #dcdcdc;

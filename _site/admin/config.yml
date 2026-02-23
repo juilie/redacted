@@ -15,6 +15,7 @@ collections:
     summary: "{{title}} - {{date | date: 'MMM D, YYYY @ h:mm A'}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Venue", name: "venue", widget: "string", required: false, hint: "Small text that appears under the title" }
       - {label: "Performance Date", name: "date", widget: "datetime", required: false, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "MMM D, YYYY", time_format: "h:mm A"}
       - { label: "Description", name: "description", widget: "markdown", required: false }
       - { label: "Link", name: "link", widget: "string", required: false }
