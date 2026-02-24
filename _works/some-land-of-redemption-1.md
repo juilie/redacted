@@ -1,5 +1,7 @@
 ---
 title: Some Land of Redemption
+layout: work
+css: /static/css/work.css
 description: >-
   *Some Land of Redemption* is not a home, it is not a haunting, it is a
   culmination of dreams unfulfilled. Echos of the self hum with pleasure,
@@ -24,7 +26,7 @@ description: >-
   **Run Time**: 45 minutes
 
 
-  [](https://www.youtube.com/watch?v=oNyb3MOqSbg)[Excerpt](https://www.youtube.com/watch?v=oNyb3MOqSbg)
+  [Excerpt](https://www.youtube.com/watch?v=oNyb3MOqSbg)
 featured_image: /static/uploads/cm_2.jpg
 video_url: https://www.youtube.com/watch?v=e_qwEk49zV4
 gallery:
