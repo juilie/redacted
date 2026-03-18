@@ -6,7 +6,7 @@ description: >-
   Film Diary Festival Closing Night Party 
 
 
-  ![](/static/uploads/690-6904786_transparent-shhh-clipart-quiet-iphone-shh-emoji-hd.png)
+  ![](/static/uploads/please-be-quiet-and-calm-shhh-gesture-icon-with-man-s-black-face-and-hands-finger-covering-mouth-on-white-background-silhouette-vector.jpg)
 link: https://events.ticketleap.com/tickets/film-diary-nyc/closing-party
 location: TBA
 ---
