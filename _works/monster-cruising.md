@@ -12,7 +12,7 @@ description: >-
   ***Textual references:*** Time Square Red Time Square Blue *by Samuel Delaney,* Everybody a Book About Freedom *by Olivia Liang*
 
 
-  **Choreographed by:** Mimi Doan and Cole Stapleton
+  **Choreographed by:** Mimi Doan and Cole Stapleton with collaboration from David Attenberger 
 
 
   **Performed by:** Cole Stapleton, Mimi Doan, Mélissa Guex
@@ -23,5 +23,5 @@ description: >-
 
   ###### Run Time: 13 minutes[](https://www.youtube.com/watch?v=E7oxBOEbPzs&t=47s)
 featured_image: /static/uploads/screenshot-2026-02-17-at-12.55.28 am.png
-video_url: ""
+video_url: https://youtu.be/E7oxBOEbPzs?si=5S3kYP-4Iw7Ldplm&t=143
 ---
