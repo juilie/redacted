@@ -26,6 +26,7 @@ description: >-
 
   **Run Time**: 35 minutes
 featured_image: /static/uploads/img_5568.jpg
+video_url: https://youtu.be/ZwWlA9hKDeA
 gallery:
   - image: /static/uploads/img_5557.jpg
   - image: /static/uploads/screenshot-2026-02-16-at-10.59.51 pm.png
