@@ -1,1 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta name="generator" content="Jekyll v4.3.3" />
+  <meta property="og:title" content="Some Land of Redemption" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="*Some Land of Redemption* is not a home, it is not a haunting, it is a culmination of dreams unfulfilled. Echos of the self hum with pleasure, loneliness, and dependency within the doll house. They are singing an origin story at the end of the world.
+
+
+
+**Choreographed and Directed by:** Mimi Doan and Cole Stapleton
+
+**Performed by:** Sage Horsey, Cayleen Del Rosario, Demetris Charalambous, Cole Stapleton, Mimi Doan
+
+**Music by**: Slic
+
+**Costumes by:** Joohee Park
+
+**Run Time**: 45 minutes
+
+[Excerpt](https://www.youtube.com/watch?v=oNyb3MOqSbg)" />
+  <meta property="og:description" content="*Some Land of Redemption* is not a home, it is not a haunting, it is a culmination of dreams unfulfilled. Echos of the self hum with pleasure, loneliness, and dependency within the doll house. They are singing an origin story at the end of the world.
+
+
+
+**Choreographed and Directed by:** Mimi Doan and Cole Stapleton
+
+**Performed by:** Sage Horsey, Cayleen Del Rosario, Demetris Charalambous, Cole Stapleton, Mimi Doan
+
+**Music by**: Slic
+
+**Costumes by:** Joohee Park
+
+**Run Time**: 45 minutes
+
+[Excerpt](https://www.youtube.com/watch?v=oNyb3MOqSbg)" />
+  <link rel="canonical" href="http://localhost:4000/works/some-land-of-redemption-1.html" />
+  <meta property="og:url" content="http://localhost:4000/works/some-land-of-redemption-1.html" />
+  <meta property="og:site_name" content="Redacted" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Some Land of Redemption" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "description": "*Some Land of Redemption* is not a home, it is not a haunting, it is a culmination of dreams unfulfilled. Echos of the self hum with pleasure, loneliness, and dependency within the doll house. They are singing an origin story at the end of the world.
+
+
+
+**Choreographed and Directed by:** Mimi Doan and Cole Stapleton
+
+**Performed by:** Sage Horsey, Cayleen Del Rosario, Demetris Charalambous, Cole Stapleton, Mimi Doan
+
+**Music by**: Slic
+
+**Costumes by:** Joohee Park
+
+**Run Time**: 45 minutes
+
+[Excerpt](https://www.youtube.com/watch?v=oNyb3MOqSbg)",
+      "headline": "Some Land of Redemption",
+      "name": "Redacted",
+      "url": "http://localhost:4000/works/some-land-of-redemption-1.html"
+    }
+  </script>
+  <!-- End Jekyll SEO tag -->
+
+  <!-- <link rel="stylesheet" href="/static/css/default.css"> -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Redacted" />
+
+  <title>「Redacted」- Some Land of Redemption</title>
+  <link rel="icon" type="image/png" href="/static/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" href="/static/images/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="/static/css/default.css">
+  <!-- Page-specific CSS -->
+  
+  <link rel="stylesheet" href="/static/css/work.css">
+  
+</head>
+
+<body>
+  <div class="image-background">
+    <video id="background-video" autoplay loop muted playsinline webkit-playsinline preload="auto">
+        <!-- H.264 MP4 for Safari/iOS compatibility (must be H.264, not VP9) -->
+        <source src="/static/videos/mirror3.mp4" type="video/mp4;">
+        <!-- Fallback MP4 -->
+        <!-- <source src="/static/videos/mirror.mp4" type="video/mp4"> -->
+         <!-- <source src="/static/videos/redacted.webm" type="video/webm;"> -->
+    </video>
+  </div>
+  <svg class="filter" id="filter" style="display: none;">
+    <svg width="250" height="250">
+  
+      <filter id='noise' x='0%' y='0%' width='100%' height='100%'>
+          <feTurbulence baseFrequency="0.03" type="turbulence" />
+    </filter>
+      
+      <rect x="0" y="0" width="100%" height="100%" filter="url(#noise)" fill="none"></rect>
+        
+  </svg>
+  <script>
+    (function() {
+      // Ensure video autoplays on iOS Safari
+      const video = document.getElementById('background-video');
+      if (video) {
+        video.muted = true;
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        
+        // Force play on iOS Safari
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            // If autoplay fails, try again after user interaction
+            document.addEventListener('touchstart', function playVideo() {
+              video.play().catch(() => {});
+              document.removeEventListener('touchstart', playVideo);
+            }, { once: true });
+          });
+        }
+        
+        // Ensure video loops
+        video.addEventListener('ended', function() {
+          video.currentTime = 0;
+          video.play();
+        });
+      }
+    })();
+  </script>
+  <div class="marquee">
+    <div class="marquee-content">
+        
+        
+        
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+        <span><p>REDACTED</p>
+</span>
+        
+    </div>
+  </div>
+  
+  <nav class="site-nav-bar">
+    <a href="/" class="site-brand">「Redacted」</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <div class="site-nav-links">
+      <a href="/works">Works</a>
+      <a href="/performances">Performances</a>
+      <a href="/press">Press</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+  <script>
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.site-nav-bar');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('nav-open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          toggle.textContent = isOpen ? 'Close' : 'Menu';
+        });
+      }
+    })();
+  </script>
+  
+
+  
+  
+
+  <main>
+    <div class="work-page">
+  <div class="work-header">
+    <h1>「Some Land of Redemption」</h1>
+    
+    <div class="work-video">
+      <div class="video-embed"><iframe src="https://www.youtube.com/embed/e_qwEk49zV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div>
+    
+  </div>
+
+  <div class="work-content">
+
+    <div class="work-description">
+      
+        
+        <p><em>Some Land of Redemption</em> is not a home, it is not a haunting, it is a culmination of dreams unfulfilled. Echos of the self hum with pleasure, loneliness, and dependency within the doll house. They are singing an origin story at the end of the world.</p>
+
+<p><strong>Choreographed and Directed by:</strong> Mimi Doan and Cole Stapleton</p>
+
+<p><strong>Performed by:</strong> Sage Horsey, Cayleen Del Rosario, Demetris Charalambous, Cole Stapleton, Mimi Doan</p>
+
+<p><strong>Music by</strong>: Slic</p>
+
+<p><strong>Costumes by:</strong> Joohee Park</p>
+
+<p><strong>Run Time</strong>: 45 minutes</p>
+
+<div class="video-embed"><iframe src="https://www.youtube.com/embed/oNyb3MOqSbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+      
+      
+      
+
+    </div>
+    <div class="work-back">
+      <a href="/works" class="back-link">← Back to Works</a>
+    </div>
+  </div>
+
+  
+  <div class="work-gallery-section">
+    <h2 class="gallery-title">Photos</h2>
+    <div class="work-gallery">
+      
+        
+          <div class="work-gallery-item">
+            <img src="/static/uploads/slr-cpr-2_22-1-.jpg" alt="slr-cpr-2_22-1-.jpg" class="work-gallery-image" data-gallery-index="0" data-gallery-src="/static/uploads/slr-cpr-2_22-1-.jpg">
+          </div>
+        
+      
+        
+          <div class="work-gallery-item">
+            <img src="/static/uploads/cm_41.jpg" alt="cm_41.jpg" class="work-gallery-image" data-gallery-index="1" data-gallery-src="/static/uploads/cm_41.jpg">
+          </div>
+        
+      
+    </div>
+  </div>
+
+  <!-- Fullscreen Gallery Overlay -->
+  <div class="work-gallery-overlay" id="work-gallery-overlay">
+    <button class="gallery-close" id="work-gallery-close" aria-label="Close gallery"><span>&times;</span></button>
+    <button class="gallery-nav gallery-prev" id="work-gallery-prev" aria-label="Previous image"><span>‹</span></button>
+    <button class="gallery-nav gallery-next" id="work-gallery-next" aria-label="Next image"><span>›</span></button>
+    <div class="gallery-container">
+      <div class="gallery-slider" id="work-gallery-slider">
+        
+        
+        <div class="gallery-slide">
+          <img src="/static/uploads/slr-cpr-2_22-1-.jpg" alt="slr-cpr-2_22-1-.jpg" class="gallery-image">
+        </div>
+        
+        
+        
+        <div class="gallery-slide">
+          <img src="/static/uploads/cm_41.jpg" alt="cm_41.jpg" class="gallery-image">
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const galleryOverlay = document.getElementById('work-gallery-overlay');
+    const gallerySlider = document.getElementById('work-gallery-slider');
+    const galleryClose = document.getElementById('work-gallery-close');
+    const galleryPrev = document.getElementById('work-gallery-prev');
+    const galleryNext = document.getElementById('work-gallery-next');
+    const galleryImages = document.querySelectorAll('.work-gallery-image');
+    
+    let currentIndex = 0;
+    let totalSlides = 0;
+
+    function initGallery() {
+      totalSlides = document.querySelectorAll('#work-gallery-slider .gallery-slide').length;
+      if (totalSlides === 0) return;
+
+      galleryImages.forEach((img, index) => {
+        img.addEventListener('click', () => openGallery(index));
+      });
+
+      galleryClose.addEventListener('click', closeGallery);
+      galleryPrev.addEventListener('click', () => navigateGallery(-1));
+      galleryNext.addEventListener('click', () => navigateGallery(1));
+
+      galleryOverlay.addEventListener('click', (e) => {
+        if (e.target === galleryOverlay) {
+          closeGallery();
+        } else if (e.target.classList.contains('gallery-image')) {
+          navigateGallery(1);
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        if (e.key === 'Escape') closeGallery();
+        else if (e.key === 'ArrowLeft') navigateGallery(-1);
+        else if (e.key === 'ArrowRight') navigateGallery(1);
+      });
+
+      setupSwipeGestures();
+    }
+
+    function setupSwipeGestures() {
+      let touchStartX = 0;
+      let touchEndX = 0;
+      const minSwipeDistance = 50;
+
+      galleryOverlay.addEventListener('touchstart', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      galleryOverlay.addEventListener('touchmove', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        const deltaX = e.touches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > Math.abs(e.touches[0].clientY - touchStartX)) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      galleryOverlay.addEventListener('touchend', (e) => {
+        if (!galleryOverlay.classList.contains('active')) return;
+        touchEndX = e.changedTouches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+        if (Math.abs(deltaX) > minSwipeDistance) {
+          if (deltaX > 0) navigateGallery(-1);
+          else navigateGallery(1);
+        }
+      }, { passive: true });
+    }
+
+    function openGallery(index) {
+      currentIndex = index;
+      updateGalleryPosition();
+      galleryOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      galleryOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function navigateGallery(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      else if (currentIndex >= totalSlides) currentIndex = 0;
+      updateGalleryPosition();
+    }
+
+    function updateGalleryPosition() {
+      gallerySlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGallery);
+    } else {
+      initGallery();
+    }
+  })();
+  </script>
+  
+</div>
+
+  </main>
+</body>
+
+</html>
