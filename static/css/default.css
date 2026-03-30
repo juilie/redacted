@@ -169,6 +169,14 @@ main {
     object-fit: cover;
     position: relative;
 }
+
+.image-background video::-webkit-media-controls,
+.image-background video::-webkit-media-controls-panel,
+.image-background video::-webkit-media-controls-start-playback-button,
+.image-background video::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
 /* h1 {
     position: relative;
 } */

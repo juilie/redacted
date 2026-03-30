@@ -3,5 +3,9 @@ layout: default
 ---
 
 <div class="about-content">
-  {{ content }}
+  {% if page.body %}
+    {{ page.body | markdownify }}
+  {% else %}
+    {{ content }}
+  {% endif %}
 </div>
