@@ -3,11 +3,7 @@ title: Cowboy Cumbia & Grow A Boyfriend
 venue: ""
 date: 2026-05-01T19:15:00
 description: |-
-  
-
   ![](/static/uploads/lucy-flier.png)
-
-
 
   ![]()
 
