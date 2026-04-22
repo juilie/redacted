@@ -10,7 +10,7 @@ collections:
     label: "Performances"
     folder: "_performances"
     create: true
-    slug: "performances/{{slug}}"
+    slug: "{{slug}}"
     sort_by: "date"
     summary: "{{title}} - {{date | date: 'MMM D, YYYY @ h:mm A'}}"
     fields:

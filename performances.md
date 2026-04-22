@@ -8,6 +8,7 @@ layout: default
 <div class="performances-list">
     {% assign performances = site.performances | sort: 'date' %}
     {% for performance in performances %}
+    {% if performance.date >= site.time %}
     {% assign description_text = performance.description %}
     {% assign image_markdown = '' %}
     {% if performance.description contains '![' %}
@@ -46,5 +47,6 @@ layout: default
         </div>
         {% endif %}
     </div>
+    {% endif %}
     {% endfor %}
 </div>
