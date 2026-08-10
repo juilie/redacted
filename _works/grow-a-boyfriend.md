@@ -1,7 +1,7 @@
 ---
 title: "Grow A Boyfriend "
 description: >-
-  \[Work in Progress]
+  **\[Work in Progress]**
 
 
   Choreographed and Performed by: Mimi Doan and Cole Stapleton
