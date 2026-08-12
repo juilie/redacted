@@ -22,5 +22,15 @@ collections:
   press:
     output: true
 
+# Works created through the CMS have no layout in their front matter, which
+# renders them as blank pages. Apply the work layout to the whole collection.
+defaults:
+  - scope:
+      path: ""
+      type: works
+    values:
+      layout: work
+      css: /static/css/work.css
+
 include:
   - static

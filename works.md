@@ -6,7 +6,26 @@ layout: default
 
 <h1>「Works」</h1>
 <div class="works-container">
-    {% assign works = site.works | sort: 'title' %}
+    {%- comment -%}
+      Order comes from _data/works_order.yml, editable by drag-and-drop in the
+      CMS under "Works Order". Works missing from that list (e.g. just created
+      and not yet dragged in) fall to the end rather than disappearing.
+    {%- endcomment -%}
+    {% assign order_slugs = "" | split: "" %}
+    {% if site.data.works_order and site.data.works_order.order %}
+        {% assign order_slugs = site.data.works_order.order | map: 'work' %}
+    {% endif %}
+    {% assign works = "" | split: "" %}
+    {% for slug in order_slugs %}
+        {% assign matched = site.works | where: 'slug', slug %}
+        {% assign works = works | concat: matched %}
+    {% endfor %}
+    {% for work in site.works %}
+        {% unless order_slugs contains work.slug %}
+            {% assign unlisted = site.works | where: 'slug', work.slug %}
+            {% assign works = works | concat: unlisted %}
+        {% endunless %}
+    {% endfor %}
     {% for work in works %}
     {% if work.featured_image %}
         {% assign img_path = work.featured_image %}

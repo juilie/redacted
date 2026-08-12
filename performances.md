@@ -19,6 +19,7 @@ layout: default
             {% assign description_text = performance.description | remove: image_markdown | strip %}
         {% endif %}
     {% endif %}
+    {% assign description_text = description_text | remove: '![]()' | strip %}
     <div class="performance-card">
         <div class="performance-left">
             {% if performance.date %}
@@ -26,9 +27,9 @@ layout: default
             </div>
             {% endif %}
             <div class="performance-title">{{ performance.title }}</div>
-            {% if performance.venue %}
+            {% unless performance.venue == blank %}
             <div class="performance-venue-name">{{ performance.venue }}</div>
-            {% endif %}
+            {% endunless %}
             {% if description_text != '' %}
             <div class="performance-venue">{{ description_text | markdownify }}</div>
             {% endif %}

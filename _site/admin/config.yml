@@ -38,6 +38,28 @@ collections:
         hint: "Add photos that will appear in a gallery at the bottom of the work page."
         fields:
           - { label: "Image", name: "image", widget: "image", required: true }
+  - name: "works_order"
+    label: "Works Order"
+    files:
+      - label: "Works Page Order"
+        name: "works_order"
+        file: "_data/works_order.yml"
+        description: "Drag the works into the order you want them to appear on the Works page. The top of this list is the first work on the page. Any work not listed here appears at the end."
+        fields:
+          - label: "Order"
+            name: "order"
+            widget: "list"
+            allow_add: true
+            collapsed: false
+            summary: "{{fields.work}}"
+            field:
+              label: "Work"
+              name: "work"
+              widget: "relation"
+              collection: "works"
+              value_field: "{{slug}}"
+              search_fields: ["title"]
+              display_fields: ["title"]
   - name: "pages"
     label: "Pages"
     files:
